@@ -12,6 +12,14 @@ public class MyLog {
         }
     }
 
+    public static void log(Object clazz, String txt) {
+        log(clazz.getClass().getSimpleName(), txt);
+    }
+
+    public static void log(String txt, Object clazz) {
+        log(clazz.getClass().getSimpleName(), txt);
+    }
+
     public static void log(String txt) {
         log("", txt);
     }
